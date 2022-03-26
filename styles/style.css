@@ -1,6 +1,6 @@
 :root {
   --pokedex-red : #de3539;
-  --pokedex-white: #dedede;
+  --pokedex-white: #ffffff;
 }
 
 * {
@@ -11,19 +11,27 @@
 body {
   font-family: 'Rajdhani', sans-serif;
   height: 100%;
-  background-color: var(--pokedex-red);
+  /* background-color: var(--pokedex-red); */
+  background-image: url(../images/fondo.jpg);
+  background-size: cover;
+ 
+  background-position: center center;
 }
 
 .title {
   text-align: center;
   font-size: 3em;
 }
+.logopo{
+  margin: auto;
+  width: 300px;
+}
 
 .main {
   display: flex;
   height: 80vh; /*Viewport height*/
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .main .inputFields,
@@ -76,7 +84,7 @@ body {
 
 .pokemonData .container:hover {
   cursor: pointer;
-  background-color: rgb(121, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .pokemonData .container img {

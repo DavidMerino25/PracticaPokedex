@@ -28,44 +28,43 @@ async function insertPokemon() {
 
     //*Crear imagen
     const pokemonImage = document.createElement('img');
-    pokemonImage.src = result[14][1].front_default; //*Image of pokemon
+    pokemonImage.src = result[14][1].front_default; 
 
     //*Nombre de pokemon e ID
     const pokemonName = document.createElement('h2');
-    pokemonName.innerText = `Name: ${result[10][1]} - ID: ${result[6][1]}`; //* Name of pokemon with ID
+    pokemonName.innerText = `Nombre: ${result[10][1]} - ID: ${result[6][1]}`; 
 
     //*Tipo de pokemon
     const pokemonType = document.createElement('h2');
-    pokemonType.innerText = `Type: ${result[16][1][0].type.name}`; //*Type of pokemon
+    pokemonType.innerText = `Tipo: ${result[16][1][0].type.name}`; 
 
     //* Pokemon HP
     const hp = document.createElement('p');
-    hp.innerText = `HP: ${result[15][1][0].base_stat}`; //*HP of pokemon
-    hp.classList.add('pokemonStats');
+    hp.innerText = `HP: ${result[15][1][0].base_stat}`; 
 
-    //* Attack power
+    //* Ataque
     const attack = document.createElement('p');
-    attack.innerText = `Attack: ${result[15][1][1].base_stat}`; //* Attack power of pokemon
+    attack.innerText = `Ataque: ${result[15][1][1].base_stat}`; 
     attack.classList.add('pokemonStats');
 
-    //* Defense
+    //* Defensa
     const defense = document.createElement('p');
-    defense.innerText = `Defense: ${result[15][1][2].base_stat}`; //* Pokemon defense
+    defense.innerText = `Defensa: ${result[15][1][2].base_stat}`; 
     defense.classList.add('pokemonStats');
 
-    //* Special Attack
+    //* Ataque especial
     const specialAttack = document.createElement('p');
-    specialAttack.innerText = `Special Attack: ${result[15][1][3].base_stat}`; //* Pokemon special attack
+    specialAttack.innerText = `Ataque Especial: ${result[15][1][3].base_stat}`; 
     specialAttack.classList.add('pokemonStats');
 
-    //* Special Defense
+    //* Defensa Especial
     const specialDefense = document.createElement('p');
-    specialDefense.innerText = `Special Defense: ${result[15][1][4].base_stat}`; //* Pokemon special defense
+    specialDefense.innerText = `Defensa Especial: ${result[15][1][4].base_stat}`; 
     specialDefense.classList.add('pokemonStats');
 
-    //* Speed
+    //* Velocidad
     const speed = document.createElement('p');
-    speed.innerText = `Speed: ${result[15][1][5].base_stat}`; //* Pokemon special attack
+    speed.innerText = `Velocidad: ${result[15][1][5].base_stat}`; //* 
     speed.classList.add('pokemonStats');
 
     //* Contenerdor de stats
