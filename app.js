@@ -1,15 +1,15 @@
-const baseUrl = `https://pokeapi.co/api/v2/pokemon/`;
+
 const pokemon = document.getElementById('pokemonName');
 const buttonPokemon = document.getElementById('searchPokemon');
 const buttonClear = document.getElementById('clearPokemon');
 const appNode = document.getElementById('app');
 
 buttonPokemon.addEventListener('click' , insertPokemon);
-buttonPokemon.addEventListener('touchstart' , insertPokemon); //*For mobile devices
+buttonPokemon.addEventListener('touchstart' , insertPokemon); 
 
 buttonClear.addEventListener('click' , deletePokemons);
-buttonClear.addEventListener('touchstart' , deletePokemons); //* For mobile devices
-
+buttonClear.addEventListener('touchstart' , deletePokemons); 
+const baseUrl = `https://pokeapi.co/api/v2/pokemon/`;
 async function insertPokemon() {
   try {
     const res = await fetch(`${baseUrl}${pokemon.value.toLocaleLowerCase()}`)
@@ -22,8 +22,7 @@ async function insertPokemon() {
       result.push([pokemonInfo , pokemonDataJSON[pokemonInfo]]);
     }
 
-    console.table(result); //! only for development
-
+    console.table(result); 
     //* Información de en frente
 
     //*Crear imagen
@@ -82,7 +81,7 @@ async function insertPokemon() {
     appNode.append(...allItems);
 
   } catch (error) {
-    alert("That pokemon isn't available. Try againt with another one!");
+    alert("Intentelo de nuevo por favor");
   }
 }
 
